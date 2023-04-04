@@ -1,5 +1,5 @@
 const siteConfig = {
-  name: "Stadium",
+  name: "LA stadium",
   pages: [
     {
       title: "Home",

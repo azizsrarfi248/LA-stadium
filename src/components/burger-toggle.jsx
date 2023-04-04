@@ -14,7 +14,6 @@ const BurgerToggle = ({ onToggle }) => {
         </svg>
 
         <svg
-          tabIndex={0}
           className="swap-on fill-current"
           xmlns="http://www.w3.org/2000/svg"
           width="32"

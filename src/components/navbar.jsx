@@ -11,7 +11,7 @@ function Navbar() {
   const [selectedPage, setSelectedPage] = useState(0);
 
   return (
-    <header className="navbar md:px-12 sticky top-0 left-0 z-40 h-20 shadow-md bg-base-200">
+    <header className="navbar md:px-12 fixed top-0 left-0 z-40 h-20 shadow-md bg-base-200 bg-opacity-40">
       <div className="navbar-start h-full">
         <div className="hidden md:block">
           <Image src={logo} alt="stadium" width={100} height={50} />
@@ -46,7 +46,9 @@ function Navbar() {
           </Link>
         ))}
       </nav>
-      <div className="navbar-end"></div>
+      <div className="navbar-end">
+        <button className="btn btn-primary">Login</button>
+      </div>
     </header>
   );
 }

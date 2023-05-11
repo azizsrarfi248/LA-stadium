@@ -1,5 +1,5 @@
 function Training() {
-  return <div>Training</div>;
+  return <div>Training from louey</div>;
 }
 
 export default Training;

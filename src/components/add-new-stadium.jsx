@@ -29,7 +29,7 @@ const StadiumSize = ({ addNewModel, setAddNewModel }) => {
             />
           </figure>
           <div className="card-body items-center text-center ">
-            <h2 className="card-title">Sghayer</h2>
+            <h2 className="card-title pt-9">Sghayer</h2>
             <p>jib 6 w goal w ija kawer</p>
             <div className="card-actions">
               <button className="btn btn-primary">choose</button>

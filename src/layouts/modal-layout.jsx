@@ -9,7 +9,9 @@ const ModalLayout = ({ children, isOpen, setOpen, className }) => {
         onChange={(e) => setOpen(e.target.checked)}
       />
       <div className="modal">
-        <div className={`modal-box max-w-full max-h-full ${className}`}>
+        <div
+          className={`modal-box max-w-full max-h-full h-[625px] w-[900px] ${className}`}
+        >
           {children}
         </div>
       </div>

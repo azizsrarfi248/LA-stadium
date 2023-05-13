@@ -14,7 +14,7 @@ function Navbar() {
     <header className="navbar md:px-12 fixed top-0 left-0 z-40 h-20 shadow-md bg-base-200 bg-opacity-40">
       <div className="navbar-start h-full">
         <div className="hidden md:block">
-          <Image src={logo} alt="stadium" width={100} height={50} />
+          <Image src={logo} alt="stadium" width={100} height={30} />
         </div>
         <div className="flex flex-col gap-1 md:hidden">
           <BurgerToggle onToggle={() => setDropdownOpen(!dropdownOpen)} />

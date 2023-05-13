@@ -1,9 +1,9 @@
-import ModalLayout from "@/layouts/modal-layout";
+import StadiumSize from "@/components/add-new-stadium";
 import Head from "next/head";
 import { useState } from "react";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [addNewModel, setAddNewModel] = useState(false);
   return (
     <>
       <Head>
@@ -29,73 +29,17 @@ export default function Home() {
               </p>
               <button
                 className="btn btn-primary"
-                onClick={() => setIsOpen(true)}
+                onClick={() => setAddNewModel(true)}
               >
                 Get Started
               </button>
-              <ModalLayout
-                className="w-[1000px] h-[700px]"
-                isOpen={isOpen}
-                setIsOpen={setIsOpen}
-              >
-                <h1 className="text-4xl font-extrabold">test</h1>
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                      <img
-                        src="/images.jpg"
-                        alt="Shoes"
-                        className="rounded-xl"
-                      />
-                    </figure>
-                    <div className="card-body items-center text-center ">
-                      <h2 className="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div className="card-actions">
-                        <button className="btn btn-primary">choose</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                      <img
-                        src="/images.jpg"
-                        alt="Shoes"
-                        className="rounded-xl"
-                      />
-                    </figure>
-                    <div className="card-body items-center text-center ">
-                      <h2 className="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div className="card-actions">
-                        <button className="btn btn-primary">choose</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  className="btn btn-circle absolute bottom-6 bg-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </ModalLayout>
             </div>
           </div>
         </div>
+        <StadiumSize
+          addNewModel={addNewModel}
+          setAddNewModel={setAddNewModel}
+        />
       </main>
     </>
   );

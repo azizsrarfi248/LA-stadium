@@ -8,7 +8,7 @@ const StadiumSize = ({ addNewModel, setAddNewModel }) => {
       setIsOpen={setAddNewModel}
     >
       <div className="flex items-center gap-10 justify-center">
-        <div className="card w-96 h-[500px] bg-red-700 shadow-xl">
+        <div className="card w-96 h-[500px] bg-white shadow-xl">
           <figure className="px-10 pt-10">
             <img src="/terrain.jpg" alt="Shoes" className="rounded-xl" />
           </figure>
@@ -29,7 +29,7 @@ const StadiumSize = ({ addNewModel, setAddNewModel }) => {
             />
           </figure>
           <div className="card-body items-center text-center ">
-            <h2 className="card-title pt-9">Sghayer</h2>
+            <h2 className="card-title pt-9g">Sghayer</h2>
             <p>jib 6 w goal w ija kawer</p>
             <div className="card-actions">
               <button className="btn btn-primary">choose</button>

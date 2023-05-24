@@ -1,9 +1,12 @@
 import StadiumSize from "@/components/add-new-stadium";
+import { useSession } from "next-auth/react";
 import Head from "next/head";
 import { useState } from "react";
 
 export default function Home() {
   const [addNewModel, setAddNewModel] = useState(false);
+  const { data: session } = useSession();
+  console.log(session);
   return (
     <>
       <Head>

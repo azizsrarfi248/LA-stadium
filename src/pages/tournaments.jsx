@@ -25,5 +25,7 @@ function Tournaments() {
 
 export default Tournaments;
 <label htmlFor="my-modal-3" className="btn">
-  open modal
+  <button className="text-center " color="yellow">
+    open modal
+  </button>
 </label>;

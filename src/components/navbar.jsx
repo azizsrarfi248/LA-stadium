@@ -4,7 +4,6 @@ import logo from "@/assets/logo/logo-no-background.svg";
 import { useState } from "react";
 import BurgerToggle from "./burger-toggle";
 import siteConfig from "@/config/site";
-import { signIn } from "next-auth/react";
 
 function Navbar() {
   const pages = siteConfig.pages;
@@ -48,9 +47,9 @@ function Navbar() {
         ))}
       </nav>
       <div className="navbar-end">
-        <button className="btn btn-primary" onClick={() => signIn()}>
+        <Link href="/login" className="btn btn-primary">
           Login
-        </button>
+        </Link>
       </div>
     </header>
   );

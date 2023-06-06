@@ -58,7 +58,7 @@ const login = () => {
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 48 48"
-                  class="LgbsSe-Bz112c"
+                  className="LgbsSe-Bz112c"
                   width={13}
                   height={13}
                 >

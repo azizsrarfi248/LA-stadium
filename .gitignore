@@ -32,3 +32,8 @@ yarn-error.log*
 .vercel
 
 .env
+
+# database
+/prisma/db.sqlite
+/prisma/db.sqlite-journal
+/prisma/dev.db

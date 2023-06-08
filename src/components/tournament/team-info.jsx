@@ -6,10 +6,10 @@
  * import TeamInfo from '@/components/tournament/team-info'
  * <TeamInfo />
  */
-const TeamInfo = () => {
+const TeamInfo = ({ register, errors }) => {
   return (
     <div className="min-w-[450px] bg-white p-8 border border-gray-300 rounded-md shadow-md">
-      <h2 className="text-3xl font-bold mb-6 font text-center underline decoration-sky-500">
+      <h2 className="text-3xl font-bold mb-6 font text-center underline decoration-lime-500">
         Formulaire De Tournoi
       </h2>
       <div className="py-16">
@@ -26,9 +26,10 @@ const TeamInfo = () => {
               type="text"
               id="Nom D'Equipe"
               name="name"
-              placeholder="Enter your name"
-              required
+              placeholder="entrez le nom"
+              {...register("teamName")}
             />
+            <p>{errors.teamName?.message}</p>
           </div>
         </div>
         <div className="mb-4">
@@ -44,19 +45,19 @@ const TeamInfo = () => {
               type="text"
               id="Nom D'Equipe"
               name="name"
-              placeholder="Enter your name"
+              placeholder="entrez le nom"
               required
             />
           </div>
         </div>
         <div className="mt-4">
           <label className="block font-semibold text-gray-700" htmlFor="phone">
-            Phone Number
+            Numero Telephone
           </label>
           <div className="mt-1 relative rounded-md shadow-sm">
             <input
               type="text"
-              name="phone"
+              name="Numero Telephone"
               id="phone"
               className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-green-500"
               placeholder="Enter your phone number"

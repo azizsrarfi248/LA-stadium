@@ -1,8 +1,19 @@
 import PlayersInfo from "@/components/tournament/players-info";
 import TeamInfo from "@/components/tournament/team-info";
 import Head from "next/head";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { tournamentRequestSchema } from "@/validation/tournamentRequest";
 
 export default function Tournaments() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(tournamentRequestSchema),
+  });
+
   return (
     <>
       <Head>
@@ -13,8 +24,9 @@ export default function Tournaments() {
       </Head>
       <main>
         <form>
-          <div className="h-screen flex justify-center py-32 gap-16">
-            <TeamInfo />
+          <div className="h-screen flex justify-center py-24 gap-16">
+            <TeamInfo register={register} errors={errors} />
+            <p>{}</p>
             <PlayersInfo />
           </div>
         </form>

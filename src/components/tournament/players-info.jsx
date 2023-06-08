@@ -4,11 +4,11 @@ import React from "react";
  * The form includes six input fields for entering player names.
  * The component returns the entered player names when the form is submitted.
  */
-const PlayersInfo = () => {
+const PlayersInfo = ({ formMethods }) => {
   return (
     <div className="min-w-[450px] bg-white p-8 border border-gray-300 rounded-md shadow-md">
       {/* Title */}
-      <h2 className="text-3xl font-bold mb-6 font text-center underline decoration-sky-500">
+      <h2 className="text-3xl font-bold mb-6 font text-center underline decoration-lime-500">
         Membres de l'équipe
       </h2>
       <div className="py-16">

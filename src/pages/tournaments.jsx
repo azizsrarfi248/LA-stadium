@@ -3,24 +3,22 @@ import TeamInfo from "@/components/tournament/team-info";
 import Head from "next/head";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { tournamentRequestSchema } from "@/validation/tournamentRequest";
+import tournamentRequestSchema from "@/validation/tournamentRequest";
 import axios from "axios";
 export default function Home() {
-  const [successMessage, setSuccessMessage] = useState(null);
-
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: zodResolver(tournamentRequestSchema),
   });
 
-  const onSubmit = async (data) => {
-    const res = await axios.post("/api/create-user", data);
+  const onCreateTournament = async (data) => {
+    const res = await axios.post("/api/create-tournament", data);
     if (res.status === 201) {
       reset();
-      setSuccessMessage("User created successfully");
     }
   };
 
@@ -33,11 +31,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <form>
+        <form onSubmit={handleSubmit(onCreateTournament)}>
           <div className="h-screen flex justify-center py-24 gap-16">
             <TeamInfo register={register} errors={errors} />
-            <p>{}</p>
-            <PlayersInfo />
+            <PlayersInfo register={register} errors={errors} />
           </div>
         </form>
       </main>

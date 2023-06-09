@@ -13,12 +13,12 @@ const tournamentRequestSchema = z.object({
     })
     .min(2, "Le nom de l'équipe doit comporter au moins 2 caractères.")
     .max(20, "Le nom de l'équipe ne doit pas dépasser 20 caractères."),
-  captinName: z
-    .string({
-      required_error: "Le champ du nom du capitaine est obligatoire.",
-    })
-    .min(2, "Le nom du capitaine doit comporter au moins 2 caractères.")
-    .max(20, "Le nom du capitaine ne doit pas dépasser 20 caractères."),
+  // captinName: z
+  //   .string({
+  //     required_error: "Le champ du nom du capitaine est obligatoire.",
+  //   })
+  //   .min(2, "Le nom du capitaine doit comporter au moins 2 caractères.")
+  //   .max(20, "Le nom du capitaine ne doit pas dépasser 20 caractères."),
   phone: z.string().regex(phoneRegex, "Numero telephone invalide."),
   player0: z
     .string({

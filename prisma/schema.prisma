@@ -18,16 +18,17 @@ model Admin {
 }
 
 model TournamentRequest {
-  id         String @id @default(cuid())
-  nom_equipe String @unique
-  capitain   User   @relation(fields: [userId], references: [id])
-  userId     String
-  joueur1    String
-  joueur2    String
-  joueur3    String
-  joueur4    String
-  joueur5    String
-  joueur6    String
+  id       String @id @default(cuid())
+  teamName String @unique
+  phone    String
+  player0  String
+  player1  String
+  player2  String
+  player3  String
+  player4  String
+  player5  String
+  capitain User   @relation(fields: [userId], references: [id])
+  userId   String
 }
 
 // Necessary for Next auth

@@ -4,9 +4,9 @@ import React from "react";
  * The form includes six input fields for entering player names.
  * The component returns the entered player names when the form is submitted.
  */
-const PlayersInfo = ({ formMethods }) => {
+const PlayersInfo = ({ register, errors }) => {
   return (
-    <div className="min-w-[450px] bg-white p-8 border border-gray-300 rounded-md shadow-md">
+    <div className="min-w-[800px] bg-white p-8 border border-gray-300 rounded-md shadow-md">
       {/* Title */}
       <h2 className="text-3xl font-bold mb-6 font text-center underline decoration-lime-500">
         Membres de l'équipe
@@ -30,8 +30,9 @@ const PlayersInfo = ({ formMethods }) => {
                 id="Joueur0"
                 name="name"
                 placeholder="Entrez le nom"
-                required
+                {...register("player0")}
               />
+              <p>{errors.player0?.message}</p>
             </div>
           </div>
           <div>
@@ -50,8 +51,9 @@ const PlayersInfo = ({ formMethods }) => {
                 id="Joueur1"
                 name="name"
                 placeholder="Entrez le nom"
-                required
+                {...register("player1")}
               />
+              <p>{errors.player1?.message}</p>
             </div>
           </div>
         </div>
@@ -73,8 +75,9 @@ const PlayersInfo = ({ formMethods }) => {
                 id="Joueur2"
                 name="name"
                 placeholder="Entrez le nom"
-                required
+                {...register("player2")}
               />
+              <p>{errors.player2?.message}</p>
             </div>
           </div>
           <div>
@@ -93,8 +96,9 @@ const PlayersInfo = ({ formMethods }) => {
                 id="Joueur3"
                 name="name"
                 placeholder="Entrez le nom"
-                required
+                {...register("player3")}
               />
+              <p>{errors.player3?.message}</p>
             </div>
           </div>
         </div>
@@ -116,8 +120,9 @@ const PlayersInfo = ({ formMethods }) => {
                 id="Joueur4"
                 name="name"
                 placeholder="Entrez le nom"
-                required
+                {...register("player4")}
               />
+              <p>{errors.player4?.message}</p>
             </div>
           </div>
           <div>
@@ -136,8 +141,9 @@ const PlayersInfo = ({ formMethods }) => {
                 id="Joueur5"
                 name="name"
                 placeholder="Entrez le nom"
-                required
+                {...register("player5")}
               />
+              <p>{errors.player5?.message}</p>
             </div>
           </div>
         </div>

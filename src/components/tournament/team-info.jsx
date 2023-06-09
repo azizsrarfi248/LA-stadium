@@ -32,7 +32,7 @@ const TeamInfo = ({ register, errors }) => {
             <p>{errors.teamName?.message}</p>
           </div>
         </div>
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <label
             htmlFor="name"
             className="block text-gray-700 font-semibold mb-2"
@@ -46,10 +46,11 @@ const TeamInfo = ({ register, errors }) => {
               id="Nom D'Equipe"
               name="name"
               placeholder="entrez le nom"
-              required
+              {...register("captinName")}
             />
+            <p>{errors.captinName?.message}</p>
           </div>
-        </div>
+        </div> */}
         <div className="mt-4">
           <label className="block font-semibold text-gray-700" htmlFor="phone">
             Numero Telephone
@@ -61,11 +62,13 @@ const TeamInfo = ({ register, errors }) => {
               id="phone"
               className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-green-500"
               placeholder="Enter your phone number"
+              {...register("phone")}
             />
             <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
               <span className="text-gray-500 sm:text-sm"> 8 digits </span>
             </div>
           </div>
+          <p>{errors.phone?.message}</p>
         </div>
         <div>
           <div className="form-control mt-8">

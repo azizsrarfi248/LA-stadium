@@ -4,11 +4,13 @@ import logo from "@/assets/logo/logo-no-background.svg";
 import { useState } from "react";
 import BurgerToggle from "./burger-toggle";
 import siteConfig from "@/config/site";
+import { useSession } from "next-auth/react";
 
 function Navbar() {
   const pages = siteConfig.pages;
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState(0);
+  const { data: session, status } = useSession();
 
   return (
     <header className="flex navbar md:px-12 fixed top-0 left-0 z-40 h-20 shadow-md bg-base-200 bg-opacity-40">
@@ -47,9 +49,17 @@ function Navbar() {
         ))}
       </nav>
       <div className="navbar-end">
-        <Link href="/login" className="btn btn-primary">
-          Login
-        </Link>
+        {status === "authenticated" ? (
+          <div className="avatar">
+            <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+              <img src={session.user.image} />
+            </div>
+          </div>
+        ) : (
+          <Link href="/login" className="btn btn-primary">
+            Login
+          </Link>
+        )}
       </div>
     </header>
   );

@@ -4,8 +4,10 @@ import Head from "next/head";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { tournamentRequestSchema } from "@/validation/tournamentRequest";
+import axios from "axios";
+export default function Home() {
+  const [successMessage, setSuccessMessage] = useState(null);
 
-export default function Tournaments() {
   const {
     register,
     handleSubmit,
@@ -13,6 +15,14 @@ export default function Tournaments() {
   } = useForm({
     resolver: zodResolver(tournamentRequestSchema),
   });
+
+  const onSubmit = async (data) => {
+    const res = await axios.post("/api/create-user", data);
+    if (res.status === 201) {
+      reset();
+      setSuccessMessage("User created successfully");
+    }
+  };
 
   return (
     <>

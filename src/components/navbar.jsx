@@ -4,7 +4,8 @@ import logo from "@/assets/logo/logo-no-background.svg";
 import { useState } from "react";
 import BurgerToggle from "./burger-toggle";
 import siteConfig from "@/config/site";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+import { ChevronDown, LogOut } from "lucide-react";
 
 function Navbar() {
   const pages = siteConfig.pages;
@@ -50,9 +51,28 @@ function Navbar() {
       </nav>
       <div className="navbar-end">
         {status === "authenticated" ? (
-          <div className="avatar">
-            <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-              <img src={session.user.image} />
+          <div className="flex items-center gap-2">
+            {/* User Image */}
+            <div className="avatar">
+              <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src={session.user.image} />
+              </div>
+            </div>
+            {/* Dropdown menu */}
+            <div className="dropdown dropdown-end">
+              <ChevronDown tabIndex={0} className="hover:cursor-pointer" />
+
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <button onClick={() => signOut()}>
+                    <LogOut className="text-red-600" />
+                    <span className="font-semibold">Sign Out</span>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         ) : (

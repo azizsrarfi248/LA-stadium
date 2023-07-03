@@ -1,6 +1,12 @@
 import Head from "next/head";
+import { useState } from "react";
+import { useSession } from "next-auth/react";
+import StadiumSize from "@/components/add-new-stadium";
+
 
 export default function AddNew() {
+  const [addNewModel, setAddNewModel] = useState(false);
+  const { data: session } = useSession();
   return (
     <>
       <Head>
@@ -9,7 +15,34 @@ export default function AddNew() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main></main>
+      <main>
+        <div
+          className="hero min-h-screen"
+          style={{
+            backgroundImage: `url("/download.jpg")`,
+          }}
+        >
+          <div className="hero-overlay bg-opacity-60"></div>
+          <div className="hero-content text-center text-neutral-content">
+            <div className="max-w-md">
+              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+              <p className="mb-5">
+              Voici, vous ajoutez des stades et les ajustez, réglez la minuterie et faites beaucoup de choses qui améliorent votre expérience d'organisation de votre terrain.
+              </p>
+              <button
+                className="btn btn-primary"
+                onClick={() => setAddNewModel(true)}
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+        <StadiumSize
+          addNewModel={addNewModel}
+          setAddNewModel={setAddNewModel}
+        />
+      </main>
     </>
   );
 }

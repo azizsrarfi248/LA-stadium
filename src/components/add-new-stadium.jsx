@@ -20,7 +20,7 @@ const StadiumSize = ({ addNewModel, setAddNewModel }) => {
             </div>
           </div>
         </div>
-        <div className="card w-96 h-[500px] bg-yellow-500 shadow-xl">
+        <div className="card w-96 h-[500px] bg-white shadow-xl">
           <figure className="px-10 pt-10">
             <img
               src="/terrain.jpg"

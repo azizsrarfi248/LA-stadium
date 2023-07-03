@@ -1,3 +1,4 @@
+import CategoryTraining from "@/components/tournament/category-training";
 import Head from "next/head";
 
 export default function Trainning() {
@@ -9,7 +10,33 @@ export default function Trainning() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main></main>
+      <main>
+        <div
+          className=" hero flex items-center justify-center gap-12 h-screen"
+          style={{
+            backgroundImage: `url("/training.jpg")`,
+          }}
+        >
+          <CategoryTraining
+            category="A"
+            age="5 to 8"
+            time="8h to 10h"
+            tarif="35DT"
+          />
+          <CategoryTraining
+            category="B"
+            age="8 to 10"
+            time="8h to 10h"
+            tarif="55DT"
+          />
+          <CategoryTraining
+            category="C"
+            age="10 to 12"
+            time="8h to 10h"
+            tarif="65DT"
+          />
+        </div>
+      </main>
     </>
   );
 }

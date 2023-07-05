@@ -3,7 +3,7 @@ import ModalLayout from "@/layouts/modal-layout";
 const StadiumSize = ({ addNewModel, setAddNewModel }) => {
   return (
     <ModalLayout
-      className="w-[1000px] h-[630px] relative bg-black"
+      className="w-[1000px] h-[630px] relative bg-current"
       isOpen={addNewModel}
       setIsOpen={setAddNewModel}
     >
@@ -13,7 +13,7 @@ const StadiumSize = ({ addNewModel, setAddNewModel }) => {
             <img src="/terrain.jpg" alt="Shoes" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center ">
-            <h2 className="card-title">kbayer</h2>
+            <h2 className="card-title">Grand Terrain</h2>
             <p>jib 10 w goal w ija kawer</p>
             <div className="card-actions">
               <button className="btn btn-primary">choose</button>
@@ -29,7 +29,7 @@ const StadiumSize = ({ addNewModel, setAddNewModel }) => {
             />
           </figure>
           <div className="card-body items-center text-center ">
-            <h2 className="card-title pt-9g">Sghayer</h2>
+            <h2 className="card-title pt-9g">petit Terrain</h2>
             <p>jib 6 w goal w ija kawer</p>
             <div className="card-actions">
               <button className="btn btn-primary">choose</button>

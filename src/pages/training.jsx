@@ -19,20 +19,20 @@ export default function Trainning() {
         >
           <CategoryTraining
             category="A"
-            age="5 to 8"
-            time="8h to 10h"
+            age="5 ans a 8 ans"
+            time="8h a 10h"
             tarif="35DT"
           />
           <CategoryTraining
             category="B"
-            age="8 to 10"
-            time="8h to 10h"
+            age="8 ans a 10 ans"
+            time="8h a 10h"
             tarif="55DT"
           />
           <CategoryTraining
             category="C"
-            age="10 to 12"
-            time="8h to 10h"
+            age="10 ans a 12 ans"
+            time="8h a 10h"
             tarif="65DT"
           />
         </div>

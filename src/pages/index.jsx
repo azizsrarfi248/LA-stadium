@@ -16,16 +16,15 @@ export default function Home() {
             <img src="/tournament.jfif" className="w-full" />
             <div className="absolute top-0  left-0 z-20 flex items-center justify-center w-full h-full backdrop-blur-sm">
               <p className=" text-slate-50 text-6xl font-extrabold">
-                sign in tournament and win prizes
+                inscrivez-vous au tournoi et gagnez des prix
               </p>
             </div>
           </div>
-
           <div id="item2" className="carousel-item w-full relative">
             <img src="/training.jpg" className="w-full" />
             <div className="absolute top-0  left-0 z-20 flex items-center justify-center w-full h-full backdrop-blur-sm">
               <p className=" text-slate-50 text-6xl font-extrabold">
-                join our training sessions and be better{" "}
+                rejoignez nos entrainement et améliorez vos competences
               </p>
             </div>
           </div>
@@ -33,7 +32,7 @@ export default function Home() {
             <img src="/coffee.jpg" className="w-full" />
             <div className="absolute top-0  left-0 z-20 flex items-center justify-center w-full h-full backdrop-blur-sm">
               <p className=" text-slate-50 text-6xl font-extrabold">
-                visit our coffee shop and take a rest
+                visiter notre café et vous détendre
               </p>
             </div>
           </div>

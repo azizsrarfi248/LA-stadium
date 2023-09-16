@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 import { useSession } from "next-auth/react";
 import StadiumSize from "@/components/add-new-stadium";
-
+import Timer from "../components/Timer";
 
 export default function AddNew() {
   const [addNewModel, setAddNewModel] = useState(false);
@@ -27,7 +27,9 @@ export default function AddNew() {
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
-              Voici, vous ajoutez des stades et les ajustez, réglez la minuterie et faites beaucoup de choses qui améliorent votre expérience d'organisation de votre terrain.
+                "Here, you add stages and adjust them, set the timer, and do
+                many things that enhance your experience of organizing your
+                field."
               </p>
               <button
                 className="btn btn-primary"
@@ -35,6 +37,10 @@ export default function AddNew() {
               >
                 Get Started
               </button>
+
+              <div>
+                <Timer />
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import ModalLayout from "@/layouts/modal-layout";
+import { Timer } from "lucide-react";
 
 const StadiumSize = ({ addNewModel, setAddNewModel }) => {
   return (
@@ -14,7 +15,7 @@ const StadiumSize = ({ addNewModel, setAddNewModel }) => {
           </figure>
           <div className="card-body items-center text-center ">
             <h2 className="card-title">Grand Terrain</h2>
-            <p>jib 10 w goal w ija kawer</p>
+            <p>10 personne par equipe</p>
             <div className="card-actions">
               <button className="btn btn-primary">choose</button>
             </div>
@@ -30,7 +31,7 @@ const StadiumSize = ({ addNewModel, setAddNewModel }) => {
           </figure>
           <div className="card-body items-center text-center ">
             <h2 className="card-title pt-9g">petit Terrain</h2>
-            <p>jib 6 w goal w ija kawer</p>
+            <p>7 personne par equipe</p>
             <div className="card-actions">
               <button className="btn btn-primary">choose</button>
             </div>

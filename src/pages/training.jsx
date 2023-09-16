@@ -36,6 +36,77 @@ export default function Trainning() {
             tarif="65DT"
           />
         </div>
+        <div>
+          <div className="text-3xl font-bold mb-6 font text-center underline decoration-lime-500">
+            pre-inscrire
+          </div>
+          <div className=" px-4 py-2 form-control w-full max-w-xs flex item-center  ">
+            <label className="label">
+              <span className="label-text">nom du parent</span>
+              <span className="label-text-alt text-red-800 text-lg">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs "
+            />
+          </div>
+          <div className=" px-4 py-2 form-control w-full max-w-xs flex place-items-center">
+            <label className="label">
+              <span className="label-text">prenom du parent</span>
+              <span className="label-text-alt text-red-800 text-lg">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <div className=" px-4 py-2 form-control w-full max-w-xs flex place-items-center">
+            <label className="label">
+              <span className="label-text">numero de telephone</span>
+              <span className="label-text-alt text-red-800 text-lg">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <div className=" px-4 py-2 form-control w-full max-w-xs flex place-items-center">
+            <label className="label">
+              <span className="label-text">categorie</span>
+              <span className="label-text-alt text-red-800 text-lg">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <div className=" px-4 py-2 form-control w-full max-w-xs flex place-items-center">
+            <label className="label">
+              <span className="label-text">nom du joueur</span>
+              <span className="label-text-alt text-red-800 text-lg">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <div className=" px-4 py-2 form-control w-full max-w-xs flex place-items-center">
+            <label className="label">
+              <span className="label-text">prenom du joueur</span>
+              <span className="label-text-alt text-red-800 text-lg">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+        </div>
       </main>
     </>
   );

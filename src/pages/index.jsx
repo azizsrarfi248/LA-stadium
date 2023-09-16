@@ -24,7 +24,7 @@ export default function Home() {
             <img src="/training.jpg" className="w-full" />
             <div className="absolute top-0  left-0 z-20 flex items-center justify-center w-full h-full backdrop-blur-sm">
               <p className=" text-slate-50 text-6xl font-extrabold">
-                rejoignez nos entrainement et améliorez vos competences
+                rejoignez nos entrainement
               </p>
             </div>
           </div>
@@ -49,42 +49,44 @@ export default function Home() {
           </a>
         </div>
         {/*more specific*/}
-        <div className="pl-5 mb-6">
-          <p className="underline decoration-lime-500 font-bold text-xl ">
+        <div className="pl-5 mb-6 flex items-center">
+          <p className="underline decoration-lime-500 font-bold text-xl border-spacing-6">
             tournament conditions :
           </p>
           <p className="font-semibold">
-            8 teams play and 1 winner
+            8 équipes jouent et 1 gagnant
             <br />
-            at least 7 players in each team
+            au moins 7 joueurs dans chaque équipe
             <br />
-            you need to sign with google or fb to create your team
+            vous devez vous connecter avec Google ou Facebook pour créer votre
+            équipe
             <br />
-            foor checking your team stats sign in
+            pour vérifier les statistiques de votre équipe, connectez-vous
           </p>
 
           <p className="underline decoration-red-500 font-bold text-xl ">
             tournament conditions :
           </p>
           <p className="font-semibold">
-            8 teams play and 1 winner
+            8 équipes jouent et 1 gagnant
             <br />
-            at least 7 players in each team
+            au moins 7 joueurs dans chaque équipe
             <br />
-            you need to sign with google or fb to create your team
+            vous devez vous connecter avec Google ou Facebook pour créer votre
+            équipe
             <br />
-            foor checking your team stats sign in
+            pour vérifier les statistiques de votre équipe, connectez-vous
           </p>
 
           <p className="underline decoration-lime-500 font-bold text-xl">
             training conditions :
           </p>
           <p className="font-semibold">
-            age between 5 and 12
+            age entre 5 et 12 ans
             <br />
-            subscription monthly with 25dt
+            Abonnement mensuel basé sur la catégorie.
             <br />
-            get 10% off in our coffee shop
+            Obtenez 20 % de réduction dans notre café.
             <br />
           </p>
         </div>

@@ -45,6 +45,17 @@ model PreSignTrainning {
   updatedAt       DateTime @updatedAt
 }
 
+model Reservation {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id])
+  reservationDate DateTime
+  stadium         Int
+  phone           String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
 // Necessary for Next auth
 model Account {
   id                String  @id @default(cuid())
@@ -84,6 +95,7 @@ model User {
   updatedAt         DateTime            @updatedAt
   TournamentRequest TournamentRequest[]
   PreSignTrainning  PreSignTrainning[]
+  Reservation       Reservation[]
 }
 
 model VerificationToken {

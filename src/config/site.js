@@ -17,6 +17,10 @@ const siteConfig = {
       title: "Add New",
       link: "/add-new",
     },
+    {
+      title: "Reservation",
+      link: "/reservation",
+    },
   ],
 };
 

@@ -6,7 +6,7 @@ const phoneRegex = new RegExp(
 );
 
 //Touranment Form schema
-const tournamentRequestSchema = z.object({
+const tournamentSignRequestSchema = z.object({
   teamName: z
     .string({
       required_error: "Le champ du nom de l'équipe est obligatoire.",
@@ -57,4 +57,4 @@ const tournamentRequestSchema = z.object({
     .min(2, "Le joueur 5 doit comporter au moins 2 caractères.")
     .max(20, "Le joueur 5 ne doit pas dépasser 20 caractères."),
 });
-export default tournamentRequestSchema;
+export default tournamentSignRequestSchema;

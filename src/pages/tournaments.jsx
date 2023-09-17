@@ -1,27 +1,7 @@
-import PlayersInfo from "@/components/tournament/players-info";
-import TeamInfo from "@/components/tournament/team-info";
 import Head from "next/head";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import tournamentRequestSchema from "@/validation/tournamentRequest";
-import axios from "axios";
-export default function Home() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm({
-    resolver: zodResolver(tournamentRequestSchema),
-  });
-
-  const onCreateTournament = async (data) => {
-    const res = await axios.post("/api/create-tournament", data);
-    if (res.status === 201) {
-      reset();
-    }
-  };
-
+import Brackets from "@/components/tournament/brackets";
+import Link from "next/link";
+export default function Touranment() {
   return (
     <>
       <Head>
@@ -30,13 +10,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <form onSubmit={handleSubmit(onCreateTournament)}>
-          <div className="h-screen flex justify-center py-24 gap-16">
-            <TeamInfo register={register} errors={errors} />
-            <PlayersInfo register={register} errors={errors} />
-          </div>
-        </form>
+      <main className="py-24 relative">
+        <h1 className="text-3xl font-bold mb-6 font text-center underline decoration-lime-500">
+          Tournament
+        </h1>
+        <Brackets />
+        <div className="absolute right-12 top-24">
+          <Link className="btn btn-primary" href="/tournament-sign">
+            Sign to tournament
+          </Link>
+        </div>
       </main>
     </>
   );

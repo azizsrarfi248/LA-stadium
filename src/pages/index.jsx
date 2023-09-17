@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,22 +13,30 @@ export default function Home() {
       <main>
         {/*carousel*/}
         <div className="carousel w-full mt-[80px] h-[600px]">
-          <div id="item1" className="carousel-item w-full relative">
+          <Link
+            href="/tournaments"
+            id="item1"
+            className="carousel-item w-full relative"
+          >
             <img src="/tournament.jfif" className="w-full" />
             <div className="absolute top-0  left-0 z-20 flex items-center justify-center w-full h-full backdrop-blur-sm">
               <p className=" text-slate-50 text-6xl font-extrabold">
                 inscrivez-vous au tournoi et gagnez des prix
               </p>
             </div>
-          </div>
-          <div id="item2" className="carousel-item w-full relative">
+          </Link>
+          <Link
+            href="/training"
+            id="item2"
+            className="carousel-item w-full relative"
+          >
             <img src="/training.jpg" className="w-full" />
             <div className="absolute top-0  left-0 z-20 flex items-center justify-center w-full h-full backdrop-blur-sm">
               <p className=" text-slate-50 text-6xl font-extrabold">
                 rejoignez nos entrainement
               </p>
             </div>
-          </div>
+          </Link>
           <div id="item3" className="carousel-item w-full relative">
             <img src="/coffee.jpg" className="w-full" />
             <div className="absolute top-0  left-0 z-20 flex items-center justify-center w-full h-full backdrop-blur-sm">

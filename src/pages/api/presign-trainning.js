@@ -7,55 +7,48 @@ export default async function handler(request, response) {
   if (!request.method === "post") {
     return response.status(405).json({ Message: "method not allowed" });
   }
-  console.log(session);
   if (!session) {
     return response.status(401).json({ Message: "Unauthorized" });
   }
   // data
   const {
-    teamName,
+    parentLastName,
+    parentFirstName,
     phone,
-    player0,
-    player1,
-    player2,
-    player3,
-    player4,
-    player5,
+    category,
+    playerLastName,
+    playerFirstName,
   } = request.body;
   // validation
   if (
-    !teamName ||
+    !parentLastName ||
+    !parentFirstName ||
     !phone ||
-    !player0 ||
-    !player1 ||
-    !player2 ||
-    !player3 ||
-    !player4 ||
-    !player5
+    !category ||
+    !playerLastName ||
+    !playerFirstName
   ) {
     return response.status(422).json({ message: "Invalid input" });
   }
-  // prisma create tournamentRequest
-  const tournamentRequest = await prisma.tournamentRequest.create({
+  // prisma create trainningPreSignRequest
+  const trainningPreSign = await prisma.preSignTrainning.create({
     data: {
-      capitain: {
+      user: {
         connect: {
           id: session.user.id,
         },
       },
-      teamName,
+      parentLastName,
+      parentFirstName,
       phone,
-      player0,
-      player1,
-      player2,
-      player3,
-      player4,
-      player5,
+      category,
+      playerLastName,
+      playerFirstName,
     },
   });
-  if (!tournamentRequest) {
+  if (!trainningPreSign) {
     return response.status(500).json({ message: "Something went wrong" });
   }
   // response
-  return response.status(201).json(tournamentRequest);
+  return response.status(201).json(trainningPreSign);
 }

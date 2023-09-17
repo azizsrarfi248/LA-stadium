@@ -31,6 +31,20 @@ model TournamentRequest {
   userId   String
 }
 
+model PreSignTrainning {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id])
+  parentLastName  String
+  parentFirstName String
+  phone           String
+  category        String
+  playerLastName  String
+  playerFirstName String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
 // Necessary for Next auth
 model Account {
   id                String  @id @default(cuid())
@@ -69,6 +83,7 @@ model User {
   createdAt         DateTime            @default(now())
   updatedAt         DateTime            @updatedAt
   TournamentRequest TournamentRequest[]
+  PreSignTrainning  PreSignTrainning[]
 }
 
 model VerificationToken {
